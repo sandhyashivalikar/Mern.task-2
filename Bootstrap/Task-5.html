@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <title>task 5 </title>
+</head>
+<style>
+    .holder {
+        padding: 80px;
+        width: 50%;
+        background: #ebeaea;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .d-flex {
+        width: 100%;
+    }
+
+    .width {
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="holder">
+        <form class="row g-3 needs-validation d-block" novalidate>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">First name</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/user.png"
+                            width="15px"></span>
+                    <input type="text" class="form-control" placeholder="First Name" id="validationCustom01" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please supply your first name
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">Last name</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/user.png"
+                            width="15px"></span>
+                    <input type="text" class="form-control" placeholder="Last Name" id="validationCustom01" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please supply your last name
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">Email</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/email.png"
+                            width="15px"></span>
+                    <input type="email" class="form-control" placeholder="E-mail Address" id="validationCustom01"
+                        value="" required>
+                    <div class="invalid-feedback">
+                        Please supply your email address
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">Phone #</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/phone.png"
+                            width="15px"></span>
+                    <input type="tel" class="form-control" placeholder="(854)555-1212" id="validationCustom01" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please supply your phone number
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">Address</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/home.png"
+                            width="15px"></span>
+                    <input type="text" class="form-control" placeholder="Address" id="validationCustom01" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please supply your street address
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">City</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/home.png"
+                            width="15px"></span>
+                    <input type="text" class="form-control" placeholder="city" id="validationCustom01" value=""
+                        required>
+                    <div class="invalid-feedback">
+                        Please supply your city
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex">
+                <label for="validationDefault04" class="width form-label">State</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/menu.png"
+                            width="15px"></span>
+                    <select class="form-select" id="validationDefault04" required>
+                        <option selected disabled value="">Please select your state</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label width">Do you have hosting?</label>
+                <div class="d-block">
+                    <input type="radio" class="mx-3 form-check-input" name="radio" required> Yes
+                    <br>
+                    <input type="radio" class="mx-3 form-check-input" name="radio" required> No
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <label for="validationCustom01" class="form-label  width">Project Description</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend"><img src="Resources/pen.png"
+                            width="15px"></span>
+                    <textarea type="text" class="form-control" placeholder="project description" id="validationCustom01"
+                        value="" required></textarea>
+                    <div class="invalid-feedback">
+                        Please supply your project description
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>
+    <p hidden>21BCE10949</p>
+</body>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
+
+</html>

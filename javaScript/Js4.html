@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Task-4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <button onclick="showDate()">Show Date</button>
+            <p id="dateShow"></p>
+        </div>
+        <div>
+            <button onclick="showTime()">Show Time</button>
+            <p id="timeShow"></p>
+        </div>
+    </div>
+
+    <script>
+        function showDate() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            const today = new Date();
+            const day = today.getDate();
+            const month = monthNames[today.getMonth()];
+            const year = today.getFullYear();
+            document.getElementById("dateShow").innerHTML = `<p>${day} ${month} ${year}</p>`;
+            document.getElementById("timeShow").innerHTML = ""; // Clear the time
+        }
+
+        function showTime(){
+            document.getElementById("timeShow").innerHTML = `<p>${new Date}</p>`
+            
+        }
+    </script>
+</body>
+</html>

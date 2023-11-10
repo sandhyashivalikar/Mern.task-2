@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Task-7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding-top: 25px;
+            text-align: center;
+        }
+        #train {
+            width: 18%;
+        }
+        .button-container {
+            padding-top: 30px;
+        }
+        .animation-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        p {
+            color: blue;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="Js7train.png" alt="Train Picture here" id="train">
+    </div>
+    <div class="animation-button">
+        <p>Click the following buttons to handle animation</p>
+    </div>
+    <div class="button-container">
+        <button id="startButton" class="animation-button">Start</button>
+        <button id="stopButton" class="animation-button">Stop</button>
+    </div>
+    <script>
+        let margin = 0;
+        const screenWidth = window.innerWidth;
+        const train = document.getElementById("train");
+        const startButton = document.getElementById("startButton");
+        const stopButton = document.getElementById("stopButton");
+        
+        let animationInterval;
+
+        startButton.onclick = function () {
+            animationInterval = setInterval(function () {
+                if (margin < screenWidth - train.clientWidth) {
+                    train.style.marginLeft = margin + "px";
+                    margin += 2;
+                } else {
+                    clearInterval(animationInterval);
+                    train.style.marginLeft = 0 + "px";
+                }
+            }, 30);
+        };
+
+        stopButton.onclick = function () {
+            clearInterval(animationInterval);
+        };
+    </script>
+</body>
+</html>

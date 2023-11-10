@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    
+    <form id="calculator-form">
+        <label for="num1">1st number:</label>
+        <input type="number" id="num1" required><br><br>
+        
+        <label for="num2">2nd number:</label>
+        <input type="number" id="num2" required><br><br>
+        
+        <label>Operation:</label>
+        <input type="radio" name="operation" value="multiply" checked> Multiply
+        <input type="radio" name="operation" value="divide"> Divide<br><br>
+        
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <h2>The Result Is:</h2>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operation = document.querySelector('input[name="operation"]:checked').value;
+            var result = 0;
+
+            if (operation === 'multiply') {
+                result = num1 * num2;
+            } else if (operation === 'divide') {
+                if (num2 === 0) {
+                    alert("Cannot divide by zero!");
+                    return;
+                }
+                result = num1 / num2;
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>

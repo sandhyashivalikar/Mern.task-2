@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task-2</title>
+</head>
+<body>
+    <h1>Alphabetic Sort</h1>
+    <label for="stringInput">Enter a String:</label>
+    <input type="text" id="stringInput">
+    <button id="sortButton">Sort</button>
+    <p id="result"></p>
+    <h5 style="color: rgb(193, 193, 193);">5</h5>
+
+    <script>
+        const stringInput = document.getElementById("stringInput");
+        const resultElement = document.getElementById("result");
+        const sortButton = document.getElementById("sortButton");
+
+        sortButton.addEventListener("click", sortString);
+
+        function sortString() {
+            const userInput = stringInput.value;
+            const sortedStr = alphabeticSort(userInput);
+            resultElement.textContent = `Sorted String: ${sortedStr}`;
+        }
+
+        function alphabeticSort(str) {
+            return str.split('').sort().join('');
+        }
+    </script>
+</body>
+</html>
